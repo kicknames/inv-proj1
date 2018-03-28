@@ -9,7 +9,7 @@ a:9:{i:0;s:26:"<html>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <link rel="stylesheet" href="/css/style.css">
         ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}}i:1;s:16:"
-        <title>";s:5:"title";N;i:2;s:1239:" CHUPAQUI - My Webpage</title>
+        <title>";s:5:"title";N;i:2;s:1589:" CHUPAQUI - My Webpage</title>
     </head>
     <body>
         <div id="content">
@@ -21,11 +21,14 @@ a:9:{i:0;s:26:"<html>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Products">Adionar Produtos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Ver Pedidos</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Produtos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Products">Adionar Produtos</a>
+                                    <a class="dropdown-item" href="/Products/list">Gerir Pedidos</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Session/logout">Log Out</a>
@@ -35,14 +38,16 @@ a:9:{i:0;s:26:"<html>
                 </nav>
             <?php } ?>
             ";s:7:"content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:13:"
-            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:38;}}i:3;s:54:"
+            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:41;}}i:3;s:111:"
         </div>
-        <div id="footer">
-            ";s:6:"footer";a:3:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:17:"
-                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:42;}i:1;a:5:{s:4:"type";i:300;s:4:"expr";a:4:{s:4:"type";i:362;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:7:"isLogin";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:42;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:42;}s:15:"true_statements";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:81:"
-                    &copy; Copyright 2015, All rights reserved.
-                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:44;}}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:45;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:13:"
-            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:45;}}i:4;s:35:"
+        <div class="container py-5 bind-top-xs">
+            <div id="footer">
+                ";s:6:"footer";a:3:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:21:"
+                    ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:46;}i:1;a:5:{s:4:"type";i:300;s:4:"expr";a:4:{s:4:"type";i:362;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:7:"isLogin";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:46;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:46;}s:15:"true_statements";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:89:"
+                        &copy; Copyright 2015, All rights reserved.
+                    ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:48;}}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:49;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:17:"
+                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:49;}}i:4;s:54:"
+            </div>
         </div>
     </body>
 </html>";}

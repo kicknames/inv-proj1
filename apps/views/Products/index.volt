@@ -15,11 +15,11 @@
                 <input type="text" class="form-control" id="price" name="price" placeholder="Preço">
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="categoria" value="option1">
+                <input class="form-check-input" type="radio" id="inlineCheckbox1" name="categoria" value="option1">
                 <label class="form-check-label" for="inlineCheckbox1">Menu principal</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="categoria" value="option2">
+                <input class="form-check-input" type="radio" id="inlineCheckbox2" name="categoria" value="option2">
                 <label class="form-check-label" for="inlineCheckbox2">Sub categoria</label>
             </div>
             <div class="form-group row" style="margin-top: 20px;">

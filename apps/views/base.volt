@@ -21,11 +21,14 @@
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Products">Adionar Produtos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Ver Pedidos</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Produtos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Products">Adionar Produtos</a>
+                                    <a class="dropdown-item" href="/Products/list">Gerir Pedidos</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Session/logout">Log Out</a>
@@ -37,12 +40,14 @@
             {% block content %}
             {% endblock %}
         </div>
-        <div id="footer">
-            {% block footer %}
-                {% if isLogin is not defined %}
-                    &copy; Copyright 2015, All rights reserved.
-                {% endif %}
-            {% endblock %}
+        <div class="container py-5 bind-top-xs">
+            <div id="footer">
+                {% block footer %}
+                    {% if isLogin is not defined %}
+                        &copy; Copyright 2015, All rights reserved.
+                    {% endif %}
+                {% endblock %}
+            </div>
         </div>
     </body>
 </html>

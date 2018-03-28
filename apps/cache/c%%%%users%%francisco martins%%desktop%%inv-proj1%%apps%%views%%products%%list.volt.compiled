@@ -1,0 +1,109 @@
+<html>
+    <head>
+        
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="/css/style.css">
+        
+        <title> CHUPAQUI - My Webpage</title>
+    </head>
+    <body>
+        <div id="content">
+            <?php if (!isset($isLogin)) { ?>
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Produtos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Products">Adionar Produtos</a>
+                                    <a class="dropdown-item" href="/Products/list">Gerir Pedidos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Session/logout">Log Out</a>
+                            </li>    
+                        </ul>
+                    </div>  
+                </nav>
+            <?php } ?>
+            
+    <div class="container">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="jumbotron">
+            <h1 class="display-4">Listagem de produtos</h1>
+            <p class="lead">Neste formulário são apresentados os produtos</p>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Bolinhos</td>
+                    <td>10 €</td>
+                    <td>Principal</td>
+                    <td style="width: 40px;">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Salada russa (Sem atum)</td>
+                    <td>30 €</td>
+                    <td>Principal</td>
+                    <td style="width: 40px;">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Bolinhos de bacalhau</td>
+                    <td>12 €</td>
+                    <td>Categoria: Bolinhos</td><
+                    <td style="width: 40px;">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+        <div class="container py-5 bind-top-xs">
+            <div id="footer">
+                
+                    <?php if (!isset($isLogin)) { ?>
+                        &copy; Copyright 2015, All rights reserved.
+                    <?php } ?>
+                
+            </div>
+        </div>
+    </body>
+</html>

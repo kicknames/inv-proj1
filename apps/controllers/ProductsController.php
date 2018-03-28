@@ -15,4 +15,9 @@ class ProductsController extends Controller
 
     }
     
+    
+    public function listAction()
+    {
+
+    }
 }
