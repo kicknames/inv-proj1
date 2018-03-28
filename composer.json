@@ -1,6 +1,9 @@
 {
   "require": {
-    "php": "^7.1.0",
-	"ext-phalcon": "*"
+      "php": "^7.1.0",
+      "ext-phalcon": "*"
+  },
+    "config": {
+      "secure-http": false
   }
 }
