@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Adionar Produtos</a>
+                    <a class="nav-link" href="/Products">Adionar Produtos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Ver Pedidos</a>
@@ -19,6 +19,4 @@
             </ul>
         </div>  
     </nav>
-    <br>
-    {{ this.session.getId()}}
 {% endblock %}
