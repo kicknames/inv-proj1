@@ -1,4 +1,5 @@
 <?php
+
 namespace app\services\session;
 
 /**
@@ -7,7 +8,8 @@ namespace app\services\session;
  * 
  * @see https://olddocs.phalconphp.com/en/3.0.0/api/Phalcon_Db_Adapter_Pdo_Mysql.html - Mais informações
  */
-use Phalcon\Db\Adapter\Pdo\Mysql as SessionAdapter;
+use Phalcon\Db\Adapter\Pdo\Mysql;
+use Phalcon\Session\Adapter\Files as Session;
 
 /**
  * Description of SessionService
@@ -15,10 +17,10 @@ use Phalcon\Db\Adapter\Pdo\Mysql as SessionAdapter;
  * @author FCMartins
  * @version 1.00.00
  */
-class SessionService extends SessionAdapter
-{
+class SessionService extends Session {
 
     private $_di;
+    private $MySql;
 
     /**
      * Inicializa o serviço que disponibiliza a funcionalidades de sessão da aplicação
@@ -34,15 +36,15 @@ class SessionService extends SessionAdapter
      * 
      * @param type $_config
      */
-    function __construct($di, $_config)
-    {
-        parent::__construct($_config);
+    function __construct($di, $_config) {
+        parent::__construct();
+        $this->start();
+        $this->MySql = new Mysql($_config);
         $this->_di = $di;
     }
 
     /** @return \app\helpers\SecurityHelper Class de encryptação */
-    private function _crypt()
-    {
+    private function _crypt() {
         return $this->_di->get('crypt');
     }
 
@@ -54,17 +56,16 @@ class SessionService extends SessionAdapter
      * 
      * @return boolean Retorna com o resultado da operação.
      */
-    function doLogin($_user, $_password)
-    {
+    function doLogin($_user, $_password) {
         try {
             /* Query a ser executada á base de dados */
-            $Query = "SELECT * FROM APP_USERS WHERE login = '" . $_user . "'"; // . " AND password = " . $_password;
+            $Query = "SELECT * FROM users WHERE username = '" . $_user . "'"; // . " AND password = " . $_password;
             /* Executa a query e devolve o resultado */
-            $resultset = $this->query($Query);
+            $resultset = $this->MySql->query($Query);
             /* Idêntifica o resultado */
             $_result = $resultset->fetch();
             $_res = $_result['password'];
-            $this->close();
+            $this->MySql->close();
             $res = $this->_crypt()->passwordVerify($_password, $_res);
             if ($res) {
                 $this->sessionStart($_result['id'], $_user);
@@ -76,34 +77,21 @@ class SessionService extends SessionAdapter
         }
     }
 
-    private function sessionStart($id, $_username)
-    {
-        session_start();
-        $_SESSION["user_id"] = $id;
-        $_SESSION["username"] = $_username;
-        $_SESSION["started"] = true;
-        session_regenerate_id();
-        session_write_close();
+    private function sessionStart($id, $_username) {
+        $this->set('id', $id);
+        $this->set('username', $_username);
     }
 
-    public function hasSessionStarted()
-    {
-        session_start();
-        $val = $_SESSION["started"];
-        session_write_close();
-        return $val;
+    public function hasSessionStarted() {
+        return $this->has('username');
     }
 
-    public function endSession()
-    {
-        session_destroy();
+    public function endSession() {
+        $this->destroy();
     }
 
-    public function getId()
-    {
-        session_start();
-        $val = $_SESSION["user_id"];
-        session_write_close();
-        return $val;
+    public function getId() {
+        return $this->get('username');
     }
+
 }

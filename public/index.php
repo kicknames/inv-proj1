@@ -8,7 +8,7 @@ use Phalcon\Mvc\Router;
 use Phalcon\Http\Request;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\Dispatcher as MvcDispatcher;
-use Phalcon\Db\Adapter\Pdo\Mysql as Database;
+use Phalcon\Mvc\View\Engine\Volt;
 use Phalcon\Mvc\Model\Manager as ModelManager;
 use Phalcon\Mvc\Model\Metadata\Memory as ModelMetadata;
 use app\helpers\SecurityHelper;
@@ -21,17 +21,17 @@ use app\services\session\SessionService;
 $loader = new Loader();
 
 $loader->registerDirs(
-    [
-        "../apps/controllers/",
-        "../apps/models/",
-        "../apps/helpers/"
-    ]
+        [
+            "../apps/controllers/",
+            "../apps/models/",
+            "../apps/helpers/"
+        ]
 );
 $loader->registerNamespaces(
-    [
-        "app\helper" => "../apps/helpers/",
-        "app\services\session" => "../apps/services"
-    ]
+        [
+            "app\helper" => "../apps/helpers/",
+            "app\services\session" => "../apps/services"
+        ]
 );
 
 $loader->register();
@@ -51,26 +51,45 @@ $di->set("response", Response::class);
 
 // Registering a Http\Request
 $di->set("request", Request::class);
+$di->set(
+    "voltService",
+    function ($view, $di) {
+        $volt = new Volt($view, $di);
 
+        $volt->setOptions(
+            [
+                "compiledPath"      => "../apps/cache/",
+                "compiledExtension" => ".compiled",
+                'compileAlways' => true
+            ]
+        );
+
+        return $volt;
+    }
+);
 // Registering the view component
 $di->set(
-    "view", function () {
+        "view", function () {
     $view = new View();
 
     $view->setViewsDir("../apps/views/");
-
+    $view->registerEngines(
+            [
+                ".volt" => "voltService",
+            ]
+    );
     return $view;
 }
 );
 
 $di->set(
-    "session", function () {
+        "session", function () {
     return new SessionService($this, [
-        "host" => "localhost",
-        "username" => "root",
-        "password" => "",
-        "dbname" => "rest",
-        ]
+        "host" => "eu-cdbr-west-02.cleardb.net",
+        "username" => "baecf296ef14dd",
+        "password" => "065fb7b9",
+        "dbname" => "heroku_97aca66527a4246",
+            ]
     );
 }
 );
@@ -82,7 +101,7 @@ $di->set("modelsMetadata", ModelMetadata::class);
 $di->set("modelsManager", ModelManager::class);
 
 $di->set(
-    "crypt", function () {
+        "crypt", function () {
     return new SecurityHelper();
 }
 );
