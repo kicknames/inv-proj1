@@ -1,16 +1,9 @@
 {% extends "base.volt" %}
 {% block content %}
-    <div class="container py-5">
+    <div class="container py-5 bind-top-xs">
         <div class="row">
             <div class="col-md-12">
-                <style>
-                    @media(min-width:768){
-                        .py-5{
-                            padding-top: 0;
-                        }
-                    }
-                </style>
-                <div class="row bind-top-xs">
+                <div class="row">
                     <div class="col-md-6 mx-auto">
                         <!-- form card login -->
                         <div class="card rounded-0">

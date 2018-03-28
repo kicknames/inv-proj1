@@ -1,28 +1,27 @@
 a:9:{i:0;s:26:"<html>
     <head>
-        ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:579:"
-
+        ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:639:"
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-        ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}}i:1;s:16:"
+                <link rel="stylesheet" href="/css/style.css">
+        ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}}i:1;s:16:"
         <title>";s:5:"title";N;i:2;s:93:" CHUPAQUI - My Webpage</title>
     </head>
     <body>
         <div id="content">
             ";s:7:"content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:13:"
-            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:18;}}i:3;s:54:"
+            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:17;}}i:3;s:54:"
         </div>
         <div id="footer">
             ";s:6:"footer";a:3:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:17:"
-                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:22;}i:1;a:5:{s:4:"type";i:300;s:4:"expr";a:4:{s:4:"type";i:362;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:7:"isLogin";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:22;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:22;}s:15:"true_statements";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:81:"
+                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:21;}i:1;a:5:{s:4:"type";i:300;s:4:"expr";a:4:{s:4:"type";i:362;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:7:"isLogin";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:21;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:21;}s:15:"true_statements";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:81:"
                     &copy; Copyright 2015, All rights reserved.
-                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:24;}}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:25;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:13:"
-            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:25;}}i:4;s:35:"
+                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:23;}}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:24;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:13:"
+            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:24;}}i:4;s:35:"
         </div>
     </body>
 </html>";}
