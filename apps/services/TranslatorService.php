@@ -37,7 +37,7 @@ class TranslatorService {
     private function getTranslation() {
         // Ask browser what is the best language
         $language = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-
+        $language = explode('-', $language[0]);
         $translationFile = '../apps/lang/' . $language[0] . '.php';
 
         // Check if we have a translation file for that lang

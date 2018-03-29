@@ -13,14 +13,10 @@ $lang = [
     "login.btn.enter" => "Entrar",
     "login.miss.username" => "Oops, you missed this one.",
     "login.miss.password" => "Enter your password too!",
-
-    //Main Page
     "base.btn.products" => "Produtos",
     "base.btn.addproducts" => "Adionar Produtos",
     "base.btn.manageorders" => "Gerir Pedidos",
     "base.btn.logout" => "Sair",
-    
-    //Add Products
     "add.title" => "Gestão de produtos",
     "add.subtitle" => "Neste formulário adicionar novos produtos",
     "add.label.name" => "Nome do artigo:",
@@ -28,13 +24,10 @@ $lang = [
     "add.check.first" => "Menu principal",
     "add.check.second" => "Sub Categoria",
     "add.btn.submit" => "Adicionar",
-  
-    //List Products
     "list.title" => "Listagem de produtos",
     "list.subtitle" => "Neste formulário são apresentados os produtos",
     "list.col.code" => "Código",
     "list.col.name" => "Nome",
     "list.col.price" => "Preço",
     "list.col.category" => "Categoria",
-    //A lista de produtos a apresentar tem de ser dinamica??!!!!Como vai ele traduzir 
 ];

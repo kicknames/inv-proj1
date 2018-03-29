@@ -36,6 +36,9 @@
                             </li>    
                         </ul>
                     </div>  
+                    <select class="form-control col-1">
+                        <option>Default select</option>
+                    </select>
                 </nav>
             <?php } ?>
             
@@ -46,7 +49,7 @@
             <div id="footer">
                 
                     <?php if (!isset($isLogin)) { ?>
-                        &copy; Copyright 2015, All rights reserved.
+                        &copy; Copyright Francisco & Aureliano Martins lda. 2018, All rights reserved.
                     <?php } ?>
                 
             </div>
