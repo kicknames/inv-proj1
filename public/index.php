@@ -15,6 +15,7 @@ use app\helpers\SecurityHelper;
 use Phalcon\Mvc\Url;
 use app\services\session\SessionService;
 use app\services\TranslatorService;
+use Phalcon\Db\Adapter\Pdo\Mysql;
 
 /**
  * Very simple MVC structure
@@ -94,10 +95,21 @@ $di->set(
 }
 );
 $di->set(
+        "db", function () {
+    return new Mysql(
+            [
+        "host" => "eu-cdbr-west-02.cleardb.net",
+        "username" => "baecf296ef14dd",
+        "password" => "065fb7b9",
+        "dbname" => "heroku_97aca66527a4246",
+            ]
+    );
+}
+);
+$di->set(
         "tradutor", function () {
     return new TranslatorService();
-},
-true);
+}, true);
 
 //Registering the Models-Metadata
 $di->set("modelsMetadata", ModelMetadata::class);

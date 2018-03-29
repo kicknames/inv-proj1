@@ -50,50 +50,27 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col"><?= $this->tradutor->get('list.col.code') ?></th>
+                    <th scope="col"><?= $this->tradutor->get('list.col.img') ?></th>
                     <th scope="col"><?= $this->tradutor->get('list.col.name') ?></th>
                     <th scope="col"><?= $this->tradutor->get('list.col.price') ?></th>
                     <th scope="col"><?= $this->tradutor->get('list.col.category') ?></th>
                     <th scope="col"></th>
                 </tr>
-            </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Bolinhos</td>
-                    <td>10 €</td>
-                    <td>Principal</td>
-                    <td style="width: 40px;">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Salada russa (Sem atum)</td>
-                    <td>30 €</td>
-                    <td>Principal</td>
-                    <td style="width: 40px;">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Bolinhos de bacalhau</td>
-                    <td>12 €</td>
-                    <td>Categoria: Bolinhos</td><
-                    <td style="width: 40px;">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button>
-                        </div>
-                    </td>
-                </tr>
+                <?php foreach ($products as $item) { ?>
+                    <tr>
+                        <th scope="row"></th>
+                        <td><?= $item->name ?></td>
+                        <td><?= $item->price ?> €</td>
+                        <td><?= $item->category ?></td>
+                        <td style="width: 40px;">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="/Products/update?id=<?= $item->id ?>"><button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button></a>
+                                <a href="/Products/remove?id=<?= $item->id ?>"><button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button></a>
+                            </div>
+                        </td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div>
