@@ -36,6 +36,9 @@
                             </li>    
                         </ul>
                     </div>  
+                    <select class="form-control col-1">
+                        <option>Default select</option>
+                    </select>
                 </nav>
             {% endif %}
             {% block content %}
@@ -45,7 +48,7 @@
             <div id="footer">
                 {% block footer %}
                     {% if isLogin is not defined %}
-                        &copy; Copyright 2015, All rights reserved.
+                        &copy; Copyright Francisco & Aureliano Martins lda. 2018, All rights reserved.
                     {% endif %}
                 {% endblock %}
             </div>
