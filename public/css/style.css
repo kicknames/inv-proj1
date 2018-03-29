@@ -30,3 +30,184 @@ and open the template in the editor.
     background: white;
     border: 1px solid red;
 }
+
+.main-map{
+    display: block;
+    background: #e2e2e2;
+    height: 82%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-map > .main-bar{
+    display: block;
+    position: relative;
+    height: 40%;
+    width: 30%;
+}
+
+.main-bar > .part-1{
+    display: block;
+    position: relative;
+    background: #909090;
+    width: 15%;
+    height: 70%;
+    left: 2%;
+    top: 5%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: -3px 0px 1px #0000008c;
+}
+.main-bar > .part-2{
+    display: block;
+    position: relative;
+    height: 27.6%;
+    width: 80%;
+    background: #909090;
+    left: 17%;
+    bottom: 22.7%;
+    border-bottom-right-radius: 40px;
+}
+.part-1 > .sit-1{
+    display: inherit;
+    position: relative;
+    height: 33%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    border-top-left-radius: 40px;
+    top: 6px;
+    left: 7px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: -4px -3px 5px 0px #008000;
+}
+.part-1 > .sit-1.occupied{
+    box-shadow: -4px -3px 5px 0px red;
+}
+.part-1 > .sit-2{
+    display: inherit;
+    position: relative;
+    height: 33%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    top: 1px;
+    left: 7px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: -4px 3px 5px 0px #008000;
+}
+.part-1 > .sit-2.occupied{
+    box-shadow: -4px 3px 5px 0px red;
+}
+.part-1 >.sit-3{
+    display: inherit;
+    position: relative;
+    height: 33%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    border-bottom-left-radius: 40px;
+    top: -4px;
+    left: 7px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: -4px 3px 5px 0px #008000;
+}
+.part-1 > .sit-3.occupied{
+    box-shadow: -4px 3px 5px 0px red;
+}
+.part-2 > .sit-1{
+    display: inline-block;
+    position: relative;
+    height: 86%;
+    width: 27%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: 0px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #2f8a11ba;
+}
+.part-2 > .sit-1.occupied{
+    box-shadow: 0px 5px 5px 0px red;
+}
+.part-2 > .sit-2{
+    display: inline-block;
+    position: relative;
+    height: 86%;
+    width: 27%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: -2px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #2f8a11ba;
+}
+.part-2 > .sit-2.occupied{
+    box-shadow: 0px 5px 5px 0px red;
+}
+.part-2 > .sit-3{
+    display: inline-block;
+    position: relative;
+    height: 86%;
+    width: 27%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: -2px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #2f8a11ba;
+    z-index: 1;
+}
+.part-2 > .sit-3.occupied{
+    box-shadow: 0px 5px 5px 0px red;
+}
+.part-3 > .sit-1{
+    display: inline-block;
+    position: relative;
+    height: 125%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 32px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 6px 1px 5px 0px #2f8a11ba;
+    z-index: 1;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.part-3 > .sit-1.occupied{
+    box-shadow: 6px 1px 5px 0px red;
+}
+.main-bar > .part-3{
+    display: block;
+    height: 30%;
+    width: 14%;
+    background: #909090;
+    top: -64%;
+    right: -82.78%;
+    position: relative;
+    border-top-right-radius: 40px;
+}

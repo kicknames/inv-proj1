@@ -10,7 +10,7 @@ class MapController extends Controller
 
     }
 
-    public function principalAction()
+    public function restaurantAction()
     {
         
     }
