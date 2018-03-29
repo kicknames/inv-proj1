@@ -36,6 +36,13 @@
                             </li>    
                         </ul>
                     </div>  
+                    <select class="form-control col-2">
+                        <option style="background-image:url(pt.svg);"> Portugal</option>
+                        <option>Espanha</option>
+                        <option>Reino Unido</option>
+                        <option>França</option>
+                        <option>Alemanha</option>
+                    </select>
                 </nav>
             {% endif %}
             {% block content %}

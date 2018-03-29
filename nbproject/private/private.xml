@@ -14,14 +14,9 @@
             <file>file:/C:/Trabalho/Investigacao/mvc/simple/apps/models/Products.php</file>
         </group>
         <group>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/lang/en.php</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/public/index.php</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/Products/index.volt</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/services/TranslatorService.php</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/Products/list.volt</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/controllers/IndexController.php</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/index/index.volt</file>
-            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/base.volt</file>
+            <file>file:/C:/Users/Bruno/Desktop/inv-proj1/public/index.php</file>
+            <file>file:/C:/Users/Bruno/Desktop/inv-proj1/apps/views/base.volt</file>
+            <file>file:/C:/Users/Bruno/Desktop/inv-proj1/apps/lang/pt.php</file>
         </group>
     </open-files>
 </project-private>
