@@ -36,9 +36,6 @@
                             </li>    
                         </ul>
                     </div>  
-                    <select class="form-control col-1">
-                        <option>Default select</option>
-                    </select>
                 </nav>
             {% endif %}
             {% block content %}

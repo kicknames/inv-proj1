@@ -12,3 +12,21 @@ and open the template in the editor.
         padding-top: 5px!important;
     }
 }
+
+.language-selector{
+    display: inline-block;
+    min-height: 20px;
+    height: 20px;
+    width: 30px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.language-selector > .option{
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid red;
+}

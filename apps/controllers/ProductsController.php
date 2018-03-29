@@ -35,4 +35,9 @@ class ProductsController extends Controller {
         $this->response->redirect("/Products/list")->send();
     }
 
+    public function updateAction() {
+        $id = $this->request->getQuery('id');
+        $this->view->item = Products::findFirst($id);
+    }
+
 }
