@@ -5,9 +5,11 @@
  * Chave => Valor
  */
 $lang = [
-    "login.titulo" => "Login",
+    "login.title" => "Login",
     "login.label.username" => "Username",
     "login.label.password" => "Password",
     "login.remeber.warn" => "Remember me on this computer!",
-    "login.btn.enter" => "Login"
+    "login.btn.enter" => "Login",
+    
+    
 ];

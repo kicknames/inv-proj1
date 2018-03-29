@@ -1,18 +1,17 @@
 {% extends "base.volt" %}
 {% block content %}
     <div class="container">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="jumbotron">
-            <h1 class="display-4">Listagem de produtos</h1>
-            <p class="lead">Neste formulário são apresentados os produtos</p>
+            <h1 class="display-4">{{this.tradutor.get('list.title')}}</h1>
+            <p class="lead">{{this.tradutor.get('list.subtitle')}}</p>
         </div>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Codigo</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Preço</th>
-                    <th scope="col">Categoria</th>
+                    <th scope="col">{{this.tradutor.get('list.col.code')}}</th>
+                    <th scope="col">{{this.tradutor.get('list.col.name')}}</th>
+                    <th scope="col">{{this.tradutor.get('list.col.price')}}</th>
+                    <th scope="col">{{this.tradutor.get('list.col.category')}}</th>
                     <th scope="col"></th>
                 </tr>
             </thead>

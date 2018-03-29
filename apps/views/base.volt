@@ -3,6 +3,7 @@
         {% block head %}
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -15,7 +16,7 @@
         <div id="content">
             {% if isLogin is not defined %}
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <i class="fa fa-home" style="color:white;font-size: 30px;"></i>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -23,15 +24,15 @@
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Produtos
+                                    {{this.tradutor.get('base.btn.products')}}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/Products">Adionar Produtos</a>
-                                    <a class="dropdown-item" href="/Products/list">Gerir Pedidos</a>
+                                    <a class="dropdown-item" href="/Products">{{this.tradutor.get('base.btn.addproducts')}}</a>
+                                    <a class="dropdown-item" href="/Products/list">{{this.tradutor.get('base.btn.manageorders')}}</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Session/logout">Log Out</a>
+                                <a class="nav-link" href="/Session/logout">{{this.tradutor.get('base.btn.logout')}}</a>
                             </li>    
                         </ul>
                     </div>  

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Invistigation">
             <file>file:/C:/Trabalho/Investigacao/mvc/simple/apps/controllers/SessionController.php</file>
@@ -11,6 +12,16 @@
             <file>file:/C:/Trabalho/Investigacao/mvc/simple/apps/views/products/index.phtml</file>
             <file>file:/C:/Trabalho/Investigacao/mvc/simple/apps/views/index/index.phtml</file>
             <file>file:/C:/Trabalho/Investigacao/mvc/simple/apps/models/Products.php</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/lang/en.php</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/public/index.php</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/Products/index.volt</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/services/TranslatorService.php</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/Products/list.volt</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/controllers/IndexController.php</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/index/index.volt</file>
+            <file>file:/C:/Users/Francisco%20Martins/Desktop/inv-proj1/apps/views/base.volt</file>
         </group>
     </open-files>
 </project-private>
