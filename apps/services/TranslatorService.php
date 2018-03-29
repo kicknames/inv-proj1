@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,14 +14,30 @@ namespace app\services;
  *
  * @author Francisco Martins
  */
-class TranslatorService{
-    //put your code here
+class TranslatorService
+{
+    /**
+     * Aqui fica guardado os texto
+     * 
+     * @var Phalcon\Translate\Adapter\NativeArray 
+     */
+    private $_textos;
     
-    
-     protected function getTranslation()
+    /**
+     * Contrutor da class
+     * 
+     * Automáticamente lÊ o ficheiro de tradução adquando e guarda-o na variável textos
+     * Isto deverá ser otimizado para usar uma chache senão a leitura do ficheiro pode por a aplicação mais lenta
+     */
+    public function __construct()
+    {   /* Inicia os textos */
+        $this->getTranslation();
+    }
+
+    private function getTranslation()
     {
         // Ask browser what is the best language
-       $language = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+        $language = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
         $translationFile = '../app/lang/' . $language[0] . '.php';
 
@@ -35,11 +50,24 @@ class TranslatorService{
         }
 
         // Return a translation object
-        return new NativeArray(
+        $this->_textos = new NativeArray(
             [
-                "content" => $lang,
+            "content" => $lang, /* Quando aqui diz que não foi incializada, ela é inicializada ali em cima ao fazeres requeri do ficheiro de linguágem*/
+                                /* Ja que ele tem esta variável dentro - depois ve os ficheiro que alterei a sua forma */
             ]
         );
     }
 
+    /**
+     * Devolve a label correspondente a um chave:
+     * 
+     * Exemplo: chave "TextoBotãoCriar" = "Criar"
+     * 
+     * @param  string  $_query : Idêntificador da label
+     * @return string          : Texto para apresentação na label
+     */
+    public function get($_query)
+    {
+        return $this->_textos->_($_query) != NULL ? $this->_textos->_($_query) : '';
+    }
 }

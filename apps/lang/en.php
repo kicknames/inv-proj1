@@ -1,15 +1,13 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* Textos para labels e butões do site 
+ * Deverá ser estruturada da seguinte forma:
+ * 
+ * Chave => Valor
  */
-
-// app/lang/en.php
 $lang = [
-    "Produtos"      => "Products",
-    "Adicionar Produtos"     => "Add Products",
-    "Gerir Pedidos" => "Manage orders",
-    
+    "login.titulo" => "Login",
+    "login.label.username" => "Username",
+    "login.label.password" => "Password",
+    "login.remeber.warn" => "Remember me on this computer!",
+    "login.btn.enter" => "Login"
 ];

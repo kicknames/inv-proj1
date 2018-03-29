@@ -14,6 +14,7 @@ use Phalcon\Mvc\Model\Metadata\Memory as ModelMetadata;
 use app\helpers\SecurityHelper;
 use Phalcon\Mvc\Url;
 use app\services\session\SessionService;
+use app\services\TranslatorService;
 
 /**
  * Very simple MVC structure
@@ -21,17 +22,17 @@ use app\services\session\SessionService;
 $loader = new Loader();
 
 $loader->registerDirs(
-        [
-            "../apps/controllers/",
-            "../apps/models/",
-            "../apps/helpers/"
-        ]
+    [
+        "../apps/controllers/",
+        "../apps/models/",
+        "../apps/helpers/"
+    ]
 );
 $loader->registerNamespaces(
-        [
-            "app\helper" => "../apps/helpers/",
-            "app\services\session" => "../apps/services"
-        ]
+    [
+        "app\helper" => "../apps/helpers/",
+        "app\services\session" => "../apps/services"
+    ]
 );
 
 $loader->register();
@@ -43,6 +44,8 @@ $di->set("router", Router::class);
 
 $di->set("url", Url::class);
 
+$di->set("tradutor", TranslatorService::class, true);
+
 // Registering a dispatcher
 $di->set("dispatcher", MvcDispatcher::class);
 
@@ -52,44 +55,43 @@ $di->set("response", Response::class);
 // Registering a Http\Request
 $di->set("request", Request::class);
 $di->set(
-    "voltService",
-    function ($view, $di) {
-        $volt = new Volt($view, $di);
+    "voltService", function ($view, $di) {
+    $volt = new Volt($view, $di);
 
-        $volt->setOptions(
-            [
-                "compiledPath"      => "../apps/cache/",
-                "compiledExtension" => ".compiled",
-                'compileAlways' => true
-            ]
-        );
+    $volt->setOptions(
+        [
+            "compiledPath" => "../apps/cache/",
+            "compiledExtension" => ".compiled",
+            'compileAlways' => true
+        ]
+    );
 
-        return $volt;
-    }
+    return $volt;
+}
 );
 // Registering the view component
 $di->set(
-        "view", function () {
+    "view", function () {
     $view = new View();
 
     $view->setViewsDir("../apps/views/");
     $view->registerEngines(
-            [
-                ".volt" => "voltService",
-            ]
+        [
+            ".volt" => "voltService",
+        ]
     );
     return $view;
 }
 );
 
 $di->set(
-        "session", function () {
+    "session", function () {
     return new SessionService($this, [
         "host" => "eu-cdbr-west-02.cleardb.net",
         "username" => "baecf296ef14dd",
         "password" => "065fb7b9",
         "dbname" => "heroku_97aca66527a4246",
-            ]
+        ]
     );
 }
 );
@@ -101,7 +103,7 @@ $di->set("modelsMetadata", ModelMetadata::class);
 $di->set("modelsManager", ModelManager::class);
 
 $di->set(
-        "crypt", function () {
+    "crypt", function () {
     return new SecurityHelper();
 }
 );
