@@ -8,7 +8,7 @@ class IndexController extends Controller
     public function initialize()
     {
         if ($this->session->hasSessionStarted() && $this->session->getId() != null) {
-            $this->response->redirect("/Map/principal")->send();
+            $this->response->redirect("/Map/restaurant")->send();
         }
     }
 
