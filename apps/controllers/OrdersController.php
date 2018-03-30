@@ -12,10 +12,13 @@ class OrdersController extends Controller {
         
     }
 
-    public function menuAction() {
-        $val = Category::find();
-        $this->view->categorys = $val;
-        $files = json_encode(scandir('img/icons'));
+    public function createAction() {
+        try {
+            $this->view->products = Products::find();
+            $this->view->category = Category::find();
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
     }
 
 }

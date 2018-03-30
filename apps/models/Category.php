@@ -23,4 +23,8 @@ class Category extends Model {
     public $name;
     public $icon;
 
+    public function getProducts() {
+        return Products::find('category = ' . $this->id);
+    }
+
 }

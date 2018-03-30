@@ -297,3 +297,26 @@ and open the template in the editor.
     width: 35px;
     margin-right: 10px;
 }
+.request-create-menu{
+    padding-left: 0;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+.request-menu-title{
+    background: #343a40;
+    background: linear-gradient(to right, #4d5f71 , #343a40);
+    border-color: #dfdfdf!important;
+    border-top-right-radius: 53px;
+}
+.request-card{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    float: right;
+}
+.card-img{
+    width: 100px;
+    margin: auto;
+    margin-left: 32%;
+    margin-top: 10px;
+}
