@@ -11,7 +11,7 @@
             </div>
         {% endfor %#}
     </div-->
-        <div id="accordion" class="col-xl-3 col-sm-4 col-6 request-create-menu" style="display:inline-block;">
+        <div id="accordion" class="col-xl-3 col-sm-4 col-6 request-create-menu">
             {% for i,item in category %}
                 <div class="card">
                     <div class="card-header">
@@ -30,7 +30,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="card col-xl-3 col-sm-4 col-6 request-card" style="display:inline-block;">
+        <div class="card col-xl-3 col-sm-3 col-6 request-card">
             <img class="card-img-top card-img" src="/img/icons/19-bill.svg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Pedido meda 1</h5>
@@ -42,6 +42,33 @@
             </div>
             <div class="card-body">
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>
+            </div>
+        </div>
+        <div class="card col-xl-6 col-sm-5 col-6 request-item-composition">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width:250px"><img class="card-img-top card-img custom-request-img" src="/img/icons/43-ice tea.svg" alt="Drink">Drinks</th>
+                        <th scope="col">            <img class="card-img-top card-img custom-request-img" src="/img/icons/11-steak.svg" alt="Card image cap">Plate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coca-Cola</td>
+                        <td>Arroz</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Atum</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Salada</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-body">
+                <a href="#" class="btn btn-primary">Adicionar</a>
             </div>´
         </div>
     </div>
