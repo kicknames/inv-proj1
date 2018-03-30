@@ -1,6 +1,6 @@
 <html>
     <head>
-        {% block head %}
+        
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,12 +9,12 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <link rel="stylesheet" href="/css/style.css">
-        {% endblock %}
-        <title>{% block title %}{% endblock %} CHUPAQUI - My Webpage</title>
+        
+        <title> CHUPAQUI - My Webpage</title>
     </head>
     <body>
         <div id="content">
-            {% if isLogin is not defined %}
+            <?php if (!isset($isLogin)) { ?>
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                     <i class="fa fa-home nav-icon"></i>
                     <a href="/Map/restaurant"><img src="/img/utensils.svg" class="nav-icon"></a>
@@ -29,15 +29,15 @@
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{this.tradutor.get('base.btn.products')}}
+                                    <?= $this->tradutor->get('base.btn.products') ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/Products">{{this.tradutor.get('base.btn.addproducts')}}</a>
-                                    <a class="dropdown-item" href="/Products/list">{{this.tradutor.get('base.btn.manageorders')}}</a>
+                                    <a class="dropdown-item" href="/Products"><?= $this->tradutor->get('base.btn.addproducts') ?></a>
+                                    <a class="dropdown-item" href="/Products/list"><?= $this->tradutor->get('base.btn.manageorders') ?></a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Session/logout">{{this.tradutor.get('base.btn.logout')}}</a>
+                                <a class="nav-link" href="/Session/logout"><?= $this->tradutor->get('base.btn.logout') ?></a>
                             </li>    
                         </ul>
                     </div>  
@@ -49,17 +49,35 @@
                         <option>Alemanha</option>
                     </select-->
                 </nav>
-            {% endif %}
-            {% block content %}
-            {% endblock %}
+            <?php } ?>
+            
+    <div class="main-map">
+        <div class="main-bar">
+            <div class="part-1">
+                <div class="sit-1 occupied" id="1"><a class="table-spot" data-index="1" data-toggle="modal" data-target="#create-request">1</a></div>
+                <div class="sit-2 occupied" id="2">2</div>
+                <div class="sit-3 occupied" id="2">3</div>
+            </div>  
+            <div class="part-2">
+                <div class="sit-1 occupied" id="1">1</div>
+                <div class="sit-2 occupied" id="2">2</div>
+                <div class="sit-3 occupied" id="2">3</div>
+            </div> 
+            <div class="part-3">
+                <div class="sit-1 occupied" id="1">1</div>
+            </div> 
+        </div>
+    </div>
+    <?= $this->partial('partials/create') ?>
+
         </div>
         <div class="container py-5 bind-top-xs">
             <div id="footer">
-                {% block footer %}
-                    {% if isLogin is not defined %}
+                
+                    <?php if (!isset($isLogin)) { ?>
                         &copy; Copyright Francisco & Aureliano Martins lda. 2018, All rights reserved.
-                    {% endif %}
-                {% endblock %}
+                    <?php } ?>
+                
             </div>
         </div>
     </body>

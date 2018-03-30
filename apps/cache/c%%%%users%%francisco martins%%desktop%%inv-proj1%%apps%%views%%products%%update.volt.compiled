@@ -16,17 +16,12 @@
         <div id="content">
             <?php if (!isset($isLogin)) { ?>
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <i class="fa fa-home nav-icon"></i>
-                    <a href="/Map/restaurant"><img src="/img/utensils.svg" class="nav-icon"></a>
-                    <a href="/Orders/list"><img src="/img/cart-arrow-down.svg"class="nav-icon cart"></a>
-                    <i class="fas fa-utensils"></i>
+                    <i class="fa fa-home" style="color:white;font-size: 30px;"></i>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                     
-
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <?= $this->tradutor->get('base.btn.products') ?>
@@ -41,47 +36,44 @@
                             </li>    
                         </ul>
                     </div>  
-                    <!--select class="form-control col-2">
+                    <select class="form-control col-2">
                         <option style="background-image:url(pt.svg);"> Portugal</option>
                         <option>Espanha</option>
                         <option>Reino Unido</option>
                         <option>França</option>
                         <option>Alemanha</option>
-                    </select-->
+                    </select>
                 </nav>
             <?php } ?>
             
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4"><?= $this->tradutor->get('list.title') ?></h1>
-            <p class="lead"><?= $this->tradutor->get('list.subtitle') ?></p>
+            <h1 class="display-4"><?= $this->tradutor->get('add.title') ?></h1>
+            <p class="lead"><?= $this->tradutor->get('add.subtitle') ?></p>
         </div>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col"><?= $this->tradutor->get('list.col.img') ?></th>
-                    <th scope="col"><?= $this->tradutor->get('list.col.name') ?></th>
-                    <th scope="col"><?= $this->tradutor->get('list.col.price') ?></th>
-                    <th scope="col"><?= $this->tradutor->get('list.col.category') ?></th>
-                    <th scope="col"></th>
-                </tr>
-            <tbody>
-                <?php foreach ($products as $item) { ?>
-                    <tr>
-                        <th scope="row"></th>
-                        <td><?= $item->name ?></td>
-                        <td><?= $item->price ?> €</td>
-                        <td><?= $item->category ?></td>
-                        <td style="width: 40px;">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="/Products/update?id=<?= $item->id ?>"><button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button></a>
-                                <a href="/Products/remove?id=<?= $item->id ?>"><button type="button" class="btn btn-secondary"><i class="fa fa-remove" style="font-size:27px"></i></button></a>
-                            </div>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+        <form action="/Products/save" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1"><?= $this->tradutor->get('add.label.name') ?></label>
+                <input type="text"  class="form-control" id="name" name="name"  placeholder="Nome" value="<?= $item->name ?>">
+            </div>
+            <div class="form-group col-md-2" style="padding-left: 0">
+                <label for="inputZip"><?= $this->tradutor->get('add.label.price') ?></label>
+                <input type="text" class="form-control" id="price" name="price" placeholder="Preço" value="<?= $item->price ?>">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineCheckbox1" name="category" value="1" <?php if ($item->category == 'Menu principal') { ?>checked="checked"<?php } ?>>
+                <label class="form-check-label" for="inlineCheckbox1"><?= $this->tradutor->get('add.check.first') ?></label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineCheckbox2" name="category" value="2" <?php if ($item->category != 'Menu principal') { ?>checked="checked"<?php } ?>>
+                <label class="form-check-label" for="inlineCheckbox2"><?= $this->tradutor->get('add.check.second') ?></label>
+            </div>
+            <div class="form-group row" style="margin-top: 20px;">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary"><?= $this->tradutor->get('add.btn.submit') ?></button>
+                </div>
+            </div>
+        </form>
     </div>
 
         </div>

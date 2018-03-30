@@ -10,19 +10,23 @@ a:9:{i:0;s:28:"<html>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <link rel="stylesheet" href="/css/style.css">
         ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}}i:1;s:17:"
-        <title>";s:5:"title";N;i:2;s:2226:" CHUPAQUI - My Webpage</title>
+        <title>";s:5:"title";N;i:2;s:2432:" CHUPAQUI - My Webpage</title>
     </head>
     <body>
         <div id="content">
             <?php if (!isset($isLogin)) { ?>
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <i class="fa fa-home" style="color:white;font-size: 30px;"></i>
+                    <i class="fa fa-home nav-icon"></i>
+                    <a href="/Map/restaurant"><img src="/img/utensils.svg" class="nav-icon"></a>
+                    <a href="/Orders/list"><img src="/img/cart-arrow-down.svg"class="nav-icon cart"></a>
                     <i class="fas fa-utensils"></i>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
+                     
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <?= $this->tradutor->get('base.btn.products') ?>
@@ -37,25 +41,25 @@ a:9:{i:0;s:28:"<html>
                             </li>    
                         </ul>
                     </div>  
-                    <select class="form-control col-2">
+                    <!--select class="form-control col-2">
                         <option style="background-image:url(pt.svg);"> Portugal</option>
                         <option>Espanha</option>
                         <option>Reino Unido</option>
                         <option>França</option>
                         <option>Alemanha</option>
-                    </select>
+                    </select-->
                 </nav>
             <?php } ?>
             ";s:7:"content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:14:"
-            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:50;}}i:3;s:115:"
+            ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:54;}}i:3;s:115:"
         </div>
         <div class="container py-5 bind-top-xs">
             <div id="footer">
                 ";s:6:"footer";a:3:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:22:"
-                    ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:55;}i:1;a:5:{s:4:"type";i:300;s:4:"expr";a:4:{s:4:"type";i:362;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:7:"isLogin";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:55;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:55;}s:15:"true_statements";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:126:"
+                    ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:59;}i:1;a:5:{s:4:"type";i:300;s:4:"expr";a:4:{s:4:"type";i:362;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:7:"isLogin";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:59;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:59;}s:15:"true_statements";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:126:"
                         &copy; Copyright Francisco & Aureliano Martins lda. 2018, All rights reserved.
-                    ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:57;}}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:58;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:18:"
-                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:58;}}i:4;s:58:"
+                    ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:61;}}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:62;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:18:"
+                ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:62;}}i:4;s:58:"
             </div>
         </div>
     </body>

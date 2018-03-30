@@ -27,7 +27,7 @@ class SessionController extends Controller {
     
     function orderAction(){
         $this->session->goMap();
-        $this->response->redirect('/restaurant')
+        $this->response->redirect('/restaurant');
     }
 
 }
