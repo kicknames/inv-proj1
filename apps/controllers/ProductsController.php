@@ -9,7 +9,7 @@ class ProductsController extends Controller {
     }
 
     public function indexAction() {
-        
+        $this->view->categories = Category::find();
     }
 
     public function listAction() {

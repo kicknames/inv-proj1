@@ -4,8 +4,10 @@
         <div class="row catalog">
             {% for i,item in categorys %}
                 <div class="col-sm col-xl-2 col-md-4 col-12">
-                    <img src="/img/icons/{{item.icon}}.svg">
-                    <span>{{item.name}}</span>
+                    <a href="/Orders/menu?category={{item.id}}">
+                        <img src="/img/icons/{{item.icon}}.svg">
+                        <span>{{item.name}}</span>
+                    </a>
                 </div>
             {% endfor %}
         </div>

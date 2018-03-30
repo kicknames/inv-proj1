@@ -10,5 +10,12 @@ jQuery(document).ready(function () {
     jQuery('.table-spot').click(function () {
         jQuery('#modal-title-div').html('Criar pedido para mesa : ' + jQuery(this).attr('data-index'));
     });
+    jQuery('.categories-sub-cont').click(function(){
+        jQuery('body').find('.categories-sub-cont').each(function(){
+            jQuery(this).removeClass('checked');
+        });
+        jQuery(this).addClass('checked');
+        jQuery('#add-category').val(jQuery(this).attr('id'));
+    });
 });
 

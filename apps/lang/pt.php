@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -18,7 +18,7 @@ $lang = [
     "base.btn.addproducts" => "Adionar Produtos",
     "base.btn.manageorders" => "Gerir Produtos",
     "base.btn.logout" => "Sair",
-    "add.title" => "Gestão de produtos",
+    "add.title" => "Adicionar produtos",
     "add.subtitle" => "Neste formulário adicionar novos produtos",
     "add.label.name" => "Nome do artigo:",
     "add.label.price" => "Preço",
@@ -31,5 +31,7 @@ $lang = [
     "list.col.name" => "Nome",
     "list.col.price" => "Preço",
     "list.col.category" => "Categoria",
-    "base.btn.category" => "Gerir categorias"
+        "list.col.id" => "Código",
+    "base.btn.category" => "Gerir categorias",
+    "add.label.category" => "Lista de categorias"
 ];

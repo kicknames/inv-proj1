@@ -23,7 +23,7 @@ class Products extends Model {
     }
 
     function getId() {
-        return $this->id;
+        return base64_encode($this->id);
     }
 
     function getName() {
@@ -35,11 +35,7 @@ class Products extends Model {
     }
 
     function getCategory() {
-        if ($this->category == '1') {
-            return 'Menu principal';
-        } else {
-            return 'Sub categoria';
-        }
+        return Category::find($this->category);
     }
 
     function setId($id) {

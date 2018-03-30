@@ -1,14 +1,13 @@
 {% extends "base.volt" %}
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="jumbotron">
             <h1 class="display-4">{{this.tradutor.get('list.title')}}</h1>
-            <p class="lead">{{this.tradutor.get('list.subtitle')}}</p>
         </div>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">{{this.tradutor.get('list.col.img')}}</th>
+                    <th scope="col">{{this.tradutor.get('list.col.id')}}</th>
                     <th scope="col">{{this.tradutor.get('list.col.name')}}</th>
                     <th scope="col">{{this.tradutor.get('list.col.price')}}</th>
                     <th scope="col">{{this.tradutor.get('list.col.category')}}</th>
@@ -17,10 +16,13 @@
             <tbody>
                 {%for item in products %}
                     <tr>
-                        <th scope="row"></th>
+                        <td>{{item.id}}</td>
                         <td>{{item.name}}</td>
                         <td>{{item.price}} €</td>
-                        <td>{{item.category}}</td>
+                        <td scope="row">
+                            <img class="table-img" src="/img/icons/{{item.category[0].icon}}.svg">
+                            <span>{{item.category[0].name}}</span>
+                        </td>
                         <td style="width: 40px;">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="/Products/update?id={{item.id}}"><button type="button" class="btn btn-secondary"><i class="fa fa-edit" style="font-size:27px"></i></button></a>
