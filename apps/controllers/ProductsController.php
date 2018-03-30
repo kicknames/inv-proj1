@@ -39,5 +39,9 @@ class ProductsController extends Controller {
         $id = $this->request->getQuery('id');
         $this->view->item = Products::findFirst($id);
     }
+    
+    public function categorysAction(){
+        
+    }
 
 }

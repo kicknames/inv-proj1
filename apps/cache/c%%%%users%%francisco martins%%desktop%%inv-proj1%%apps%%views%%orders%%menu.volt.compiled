@@ -51,24 +51,16 @@
                 </nav>
             <?php } ?>
             
-    <div class="main-map">
-        <div class="main-bar">
-            <div class="part-1">
-                <div class="sit-1 occupied" id="1"><a class="table-spot" data-index="1" data-toggle="modal" data-target="#create-request">1</a></div>
-                <div class="sit-2 occupied" id="2">2</div>
-                <div class="sit-3 occupied" id="2">3</div>
-            </div>  
-            <div class="part-2">
-                <div class="sit-1 occupied" id="1">1</div>
-                <div class="sit-2 occupied" id="2">2</div>
-                <div class="sit-3 occupied" id="2">3</div>
-            </div> 
-            <div class="part-3">
-                <div class="sit-1 occupied" id="1">1</div>
-            </div> 
+    <div class="container-fluid">
+        <div class="row catalog">
+            <?php foreach ($categorys as $i => $item) { ?>
+                <div class="col-sm col-xl-2 col-md-4 col-12">
+                    <img src="/img/icons/<?= $item->icon ?>.svg">
+                    <span><?= $item->name ?></span>
+                </div>
+            <?php } ?>
         </div>
     </div>
-    <?= $this->partial('partials/create') ?>
 
         </div>
         <div class="container py-5 bind-top-xs">

@@ -6,6 +6,7 @@
  * and open the template in the editor.
  */
 $lang = [
+    "titulo" => "Gestão Oteleira",
     "login.title" => "Acesso",
     "login.label.username" => "Utilizador",
     "login.label.password" => "Password",
@@ -30,4 +31,5 @@ $lang = [
     "list.col.name" => "Nome",
     "list.col.price" => "Preço",
     "list.col.category" => "Categoria",
+    "base.btn.category" => "Gerir categorias"
 ];

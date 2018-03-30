@@ -93,5 +93,9 @@ class SessionService extends Session {
     public function getId() {
         return $this->get('username');
     }
+    
+    public function incre($var){
+        return $var++;
+    }
 
 }

@@ -11,7 +11,7 @@
             <link rel="stylesheet" href="/css/styleasdasd12312312.css">
             <script src="/js/buildJs12312312312.js" type="text/javascript"></script>
         {% endblock %}
-        <title>{% block title %}{% endblock %} CHUPAQUI - My Webpage</title>
+        <title>{% block title %}{% endblock %}{{this.tradutor.get('titulo')}}</title>
     </head>
     <body>
         <div id="content">
@@ -19,15 +19,13 @@
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                     <i class="fa fa-home nav-icon"></i>
                     <a href="/Map/restaurant"><img src="/img/utensils.svg" class="nav-icon"></a>
-                    <a href="/Orders/list"><img src="/img/cart-arrow-down.svg"class="nav-icon cart"></a>
+                    <a href="/Orders/menu"><i class="fa fa-book" style="font-size:33px;color:white;margin-left: 7px;margin-right:10px"></i></a>
                     <i class="fas fa-utensils"></i>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                     
-
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{this.tradutor.get('base.btn.products')}}
@@ -35,6 +33,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/Products">{{this.tradutor.get('base.btn.addproducts')}}</a>
                                     <a class="dropdown-item" href="/Products/list">{{this.tradutor.get('base.btn.manageorders')}}</a>
+                                    <a class="dropdown-item" href="/Products/categorys">{{this.tradutor.get('base.btn.category')}}</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -58,7 +57,7 @@
             <div id="footer">
                 {% block footer %}
                     {% if isLogin is not defined %}
-                        &copy; Copyright Francisco & Aureliano Martins lda. 2018, All rights reserved.
+                       
                     {% endif %}
                 {% endblock %}
             </div>
