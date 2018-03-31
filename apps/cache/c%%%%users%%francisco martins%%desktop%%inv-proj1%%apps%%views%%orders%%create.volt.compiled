@@ -55,7 +55,7 @@
         <!--div class="row catalog">
         
     </div-->
-        <div id="accordion" class="col-xl-3 col-sm-4 col-6 request-create-menu">
+        <div id="accordion" class="col-xl-3 col-sm-4 col-12 request-create-menu">
             <?php foreach ($category as $i => $item) { ?>
                 <div class="card">
                     <div class="card-header">
@@ -88,7 +88,7 @@
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>
             </div>
         </div>
-        <div class="card col-xl-6 col-sm-5 col-6 request-item-composition">
+        <div class="card col-xl-6 col-sm-8 col-12 request-item-composition">
             <table class="table table-hover">
                 <thead>
                     <tr>
