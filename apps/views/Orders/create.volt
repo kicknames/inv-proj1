@@ -22,8 +22,7 @@
                     </div>
                     <div id="collapse{{i}}" class="collapse" data-parent="#accordion">
                         {% for x,subitem in item.products %}
-                            <div class="card-body">
-                                {{subitem.name}}
+                            <div data-id="{{subitem.id}}" data-class="{{item.id}}" data-text="{{subitem.name}}" class="card-body products-item-add">{{subitem.name}}<i class="fas fa-plus-circle" style="float:right"></i>
                             </div>
                         {% endfor %}
                     </div>
@@ -32,13 +31,15 @@
         </div>
         <div class="card col-xl-3 col-sm-3 col-6 request-card">
             <img class="card-img-top card-img" src="/img/icons/19-bill.svg" alt="Card image cap">
+            <h5 class="card-title">Pedido:</h5>
             <div class="card-body">
-                <h5 class="card-title">Pedido meda 1</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Bacalhau</li>
-                    <li class="list-group-item">Bolinhos</li>
-                    <li class="list-group-item">Coca-cola</li>
-                </ul>
+                <h5 class="card-title" id="request-drinks">Bebidas:</h5>
+                <!--ul id="new-request-list" class="list-group list-group-flush">
+                    <li class="list-group-item">Prato Grande de Bacalhau</li>
+                    <li class="list-group-item">Vinho do Lano 1L</li>
+                </ul-->
+                <h5 class="card-title" id="request-food">Pratos:</h5>
+
             </div>
             <div class="card-body">
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>
@@ -50,8 +51,7 @@
                 <span class="inner-text">Drinks</span>
             </div>
             <div  class="request-custom-items col-8">
-                <ul class="list-group list-group-flush list-products">
-                    <li class="list-group-item">Coca-cola</li>
+                <ul class="list-group list-group-flush list-products" id="drinks-list">
                 </ul>
             </div>
             <hr>
@@ -60,15 +60,10 @@
                 <span class="inner-text">plate</span>
             </div>
             <div  class="request-custom-items col-8">
-                <ul class="list-group list-group-flush list-products">
-                    <li class="list-group-item">Arroz</li>
-                    <li class="list-group-item">Carne</li>
-                    <li class="list-group-item">Peixe</li>
+                <ul class="list-group list-group-flush list-products" id="plate-composition-list">
                 </ul>
             </div>
-            <div class="card-body create-container">
-                <a href="#" class="btn btn-primary">Adicionar</a>
-            </div>´
+            <div class="card-body create-container"><div href="#" class="btn btn-primary">Adicionar</div></div>
         </div>
     </div>
 {% endblock %}

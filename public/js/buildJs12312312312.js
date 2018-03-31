@@ -10,12 +10,21 @@ jQuery(document).ready(function () {
     jQuery('.table-spot').click(function () {
         jQuery('#modal-title-div').html('Criar pedido para mesa : ' + jQuery(this).attr('data-index'));
     });
-    jQuery('.categories-sub-cont').click(function(){
-        jQuery('body').find('.categories-sub-cont').each(function(){
+    jQuery('.categories-sub-cont').click(function () {
+        jQuery('body').find('.categories-sub-cont').each(function () {
             jQuery(this).removeClass('checked');
         });
         jQuery(this).addClass('checked');
         jQuery('#add-category').val(jQuery(this).attr('id'));
+    });
+    jQuery('.products-item-add').click(function () {
+        if (jQuery(this).attr('data-class') === '1') {
+            jQuery('#drinks-list')
+                    .append('<li class="list-group-item" data-id=' + jQuery(this).attr('data-class') + '>' + jQuery(this).attr('data-text') + '</li>');
+        } else {
+            jQuery('#plate-composition-list')
+                    .append('<li class="list-group-item" data-id=' + jQuery(this).attr('data-class') + '>' + jQuery(this).attr('data-text') + '</li>');
+        }
     });
 });
 

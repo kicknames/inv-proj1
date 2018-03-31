@@ -31,7 +31,12 @@ and open the template in the editor.
         min-width: 43%;
     }
 }
-
+.top-menu{
+    font-size: 33px;
+    color: white;
+    margin-left: 7px;
+    margin-right: 10px;
+}
 .language-selector{
     display: inline-block;
     min-height: 20px;
@@ -106,6 +111,9 @@ and open the template in the editor.
 }
 .part-1 > .sit-1.occupied{
     box-shadow: -4px -3px 5px 0px red;
+}
+.products-item-add{
+    cursor: pointer;
 }
 .part-1 > .sit-2{
     display: inherit;
