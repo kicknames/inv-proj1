@@ -16,7 +16,7 @@
     <body>
         <div id="content">
             {% if isLogin is not defined %}
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                     <i class="fa fa-home nav-icon"></i>
                     <a href="/Map/restaurant"><img src="/img/utensils.svg" class="nav-icon"></a>
                     <a href="/Orders/create"><i class="fa fa-book" style="font-size:33px;color:white;margin-left: 7px;margin-right:10px"></i></a>
