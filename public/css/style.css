@@ -13,8 +13,22 @@ and open the template in the editor.
     }
 }
 @media (max-width: 768px){
+    .request-create-menu{
+        padding-right: 0;
+    }
+}
+@media (max-width: 800px){
+    .container-fluid{
+        padding-right: 4px;
+    }
     .request-card{
         display: none!important;
+    }
+    .request-create-menu{
+        padding-right: 0;
+    }
+    .request-item-composition{
+        min-width: 43%;
     }
 }
 
