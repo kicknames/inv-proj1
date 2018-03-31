@@ -44,30 +44,29 @@
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>
             </div>
         </div>
-        <div class="card col-xl-6 col-sm-8 col-12 request-item-composition">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col" style="width:250px"><img class="card-img-top card-img custom-request-img" src="/img/icons/43-ice tea.svg" alt="Drink">Drinks</th>
-                        <th scope="col">            <img class="card-img-top card-img custom-request-img" src="/img/icons/11-steak.svg" alt="Card image cap">Plate</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Coca-Cola</td>
-                        <td>Arroz</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Atum</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Salada</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="card-body">
+        <div class="card col-xl-6 col-md-5 col-sm-8 col-12 request-item-composition">
+            <div  class="request-custom-items col-3">
+                <img class="card-img-top card-img custom-request-img" src="/img/icons/43-ice tea.svg" alt="Drink">
+                <span class="inner-text">Drinks</span>
+            </div>
+            <div  class="request-custom-items col-8">
+                <ul class="list-group list-group-flush list-products">
+                    <li class="list-group-item">Coca-cola</li>
+                </ul>
+            </div>
+            <hr>
+            <div  class="request-custom-items col-3">
+                <img class="card-img-top card-img custom-request-img" src="/img/icons/11-steak.svg" alt="Drink">
+                <span class="inner-text">plate</span>
+            </div>
+            <div  class="request-custom-items col-8">
+                <ul class="list-group list-group-flush list-products">
+                    <li class="list-group-item">Arroz</li>
+                    <li class="list-group-item">Carne</li>
+                    <li class="list-group-item">Peixe</li>
+                </ul>
+            </div>
+            <div class="card-body create-container">
                 <a href="#" class="btn btn-primary">Adicionar</a>
             </div>´
         </div>

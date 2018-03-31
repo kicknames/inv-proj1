@@ -333,5 +333,26 @@ and open the template in the editor.
 }
 .custom-request-img{
     margin: 15px 0;
-    margin-right: 100%;
+    width: auto;
+}
+.inner-text{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.request-custom-items{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: top;
+    padding: 0;
+}
+.create-container{
+    margin-top: 10px;
+    border-top: 1px solid black;
+    text-align: right;
+}
+.list-products{
+    text-align: left;
 }
