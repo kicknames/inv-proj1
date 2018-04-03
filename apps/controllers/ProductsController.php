@@ -29,14 +29,14 @@ class ProductsController extends Controller {
     }
 
     public function removeAction() {
-        $id = $this->request->getQuery('id');
+        $id = base64_decode($this->request->getQuery('id'));
         $_prod = Products::findFirst($id);
         $_prod->delete();
         $this->response->redirect("/Products/list")->send();
     }
 
     public function updateAction() {
-        $id = $this->request->getQuery('id');
+        $id = base64_decode($this->request->getQuery('id'));
         $this->view->item = Products::findFirst($id);
     }
     

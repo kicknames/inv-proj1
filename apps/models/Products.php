@@ -25,6 +25,10 @@ class Products extends Model {
     function getId() {
         return base64_encode($this->id);
     }
+    
+    function getNormalId(){
+        return str_pad($this->id, 4, '0', STR_PAD_LEFT);;
+    }
 
     function getName() {
         return $this->name;

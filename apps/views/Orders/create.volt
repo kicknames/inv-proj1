@@ -63,7 +63,7 @@
                 <ul class="list-group list-group-flush list-products" id="plate-composition-list">
                 </ul>
             </div>
-            <div class="card-body create-container"><div href="#" class="btn btn-primary">Adicionar</div></div>
+            <div class="card-body create-container"><div id="add-to-plate-request" class="btn btn-primary">Adicionar</div></div>
         </div>
     </div>
 {% endblock %}

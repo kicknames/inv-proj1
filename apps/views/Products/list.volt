@@ -16,7 +16,7 @@
             <tbody>
                 {%for item in products %}
                     <tr>
-                        <td>{{item.id}}</td>
+                        <td>{{item.getNormalId()}}</td>
                         <td>{{item.name}}</td>
                         <td>{{item.price}} €</td>
                         <td scope="row">

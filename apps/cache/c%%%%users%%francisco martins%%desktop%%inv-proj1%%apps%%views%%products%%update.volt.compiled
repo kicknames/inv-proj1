@@ -9,43 +9,48 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <link rel="stylesheet" href="/css/style.css">
+            <script src="/js/buildJs12312312312.js" type="text/javascript"></script>
+            <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
         
-        <title> CHUPAQUI - My Webpage</title>
+        <title><?= $this->tradutor->get('titulo') ?></title>
     </head>
     <body>
-        <div id="content">
-            <?php if (!isset($isLogin)) { ?>
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <i class="fa fa-home" style="color:white;font-size: 30px;"></i>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <?= $this->tradutor->get('base.btn.products') ?>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/Products"><?= $this->tradutor->get('base.btn.addproducts') ?></a>
-                                    <a class="dropdown-item" href="/Products/list"><?= $this->tradutor->get('base.btn.manageorders') ?></a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Session/logout"><?= $this->tradutor->get('base.btn.logout') ?></a>
-                            </li>    
-                        </ul>
-                    </div>  
-                    <select class="form-control col-2">
-                        <option style="background-image:url(pt.svg);"> Portugal</option>
-                        <option>Espanha</option>
-                        <option>Reino Unido</option>
-                        <option>França</option>
-                        <option>Alemanha</option>
-                    </select>
-                </nav>
-            <?php } ?>
-            
+        <?php if (!isset($isLogin)) { ?>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="width: 100% !important;">
+                <a href="/Map/restaurant"><i class="fas fa-home top-menu"></i></a>
+                <a href="/Orders/create"><i class="fas fa-shopping-basket top-menu"></i></a>
+                <a href="/Orders/list"><i class="fas fa-clipboard-list top-menu"></i></a>
+                <i class="fas fa-shopping-cart top-menu"></i>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <?= $this->tradutor->get('base.btn.products') ?>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/Products"><?= $this->tradutor->get('base.btn.addproducts') ?></a>
+                                <a class="dropdown-item" href="/Products/list"><?= $this->tradutor->get('base.btn.manageorders') ?></a>
+                                <a class="dropdown-item" href="/Products/categorys"><?= $this->tradutor->get('base.btn.category') ?></a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Session/logout"><?= $this->tradutor->get('base.btn.logout') ?></a>
+                        </li>    
+                    </ul>
+                </div>  
+                <!--select class="form-control col-2">
+                    <option style="background-image:url(pt.svg);"> Portugal</option>
+                    <option>Espanha</option>
+                    <option>Reino Unido</option>
+                    <option>França</option>
+                    <option>Alemanha</option>
+                </select-->
+            </nav>
+        <?php } ?>
+        
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4"><?= $this->tradutor->get('add.title') ?></h1>
@@ -76,12 +81,11 @@
         </form>
     </div>
 
-        </div>
         <div class="container py-5 bind-top-xs">
             <div id="footer">
                 
                     <?php if (!isset($isLogin)) { ?>
-                        &copy; Copyright Francisco & Aureliano Martins lda. 2018, All rights reserved.
+
                     <?php } ?>
                 
             </div>
