@@ -21,4 +21,8 @@ class OrdersController extends Controller {
         }
     }
 
+    public function listAction() {
+        
+    }
+
 }

@@ -38,11 +38,20 @@ jQuery(document).ready(function () {
     /**
      * Adiciona o prato ao pedido
      */
-    jQuery('#add-to-plate-request').click(function(){
-        jQuery('#request-food').after(jQuery('#plate-composition-list').clone());
-        jQuery('#plate-composition-list').children().each(function(){
+    jQuery('#add-to-plate-request').click(function () {
+        var clone = jQuery('#plate-composition-list').clone();
+        console.log(clone);
+        clone.attr('id', 'new-req-item');
+        jQuery('#request-food').after(clone);
+        jQuery('#plate-composition-list').children().each(function () {
             jQuery(this).remove();
         });
+    });
+    jQuery('#uname1, #pwd1').focus(function (e) {
+            jQuery('#login-img').fadeOut(200);
+    });
+    jQuery('#uname1, #pwd1').focusout(function (e) {
+            jQuery('#login-img').fadeIn(200);
     });
 });
 

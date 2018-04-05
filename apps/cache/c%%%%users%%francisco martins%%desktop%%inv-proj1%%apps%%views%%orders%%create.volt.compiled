@@ -52,9 +52,6 @@
         <?php } ?>
         
     <div class="container-fluid">
-        <!--div class="row catalog">
-        
-    </div-->
         <div id="accordion" class="col-xl-3 col-sm-4 col-12 request-create-menu">
             <?php foreach ($category as $i => $item) { ?>
                 <div class="card">
@@ -83,7 +80,6 @@
                     <li class="list-group-item">Vinho do Lano 1L</li>
                 </ul-->
                 <h5 class="card-title" id="request-food">Pratos:</h5>
-
             </div>
             <div class="card-body">
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>

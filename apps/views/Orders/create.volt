@@ -1,16 +1,6 @@
 {% extends "base.volt" %}
 {% block content %}
     <div class="container-fluid">
-        <!--div class="row catalog">
-        {# % for i,item in categorys %}
-            <div class="col-sm col-xl-2 col-md-4 col-12">
-                <a href="/Orders/menu?category={{item.id}}">
-                    <img src="/img/icons/{{item.icon}}.svg">
-                    <span>{{item.name}}</span>
-                </a>    
-            </div>
-        {% endfor %#}
-    </div-->
         <div id="accordion" class="col-xl-3 col-sm-4 col-12 request-create-menu">
             {% for i,item in category %}
                 <div class="card">
@@ -39,7 +29,6 @@
                     <li class="list-group-item">Vinho do Lano 1L</li>
                 </ul-->
                 <h5 class="card-title" id="request-food">Pratos:</h5>
-
             </div>
             <div class="card-body">
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>

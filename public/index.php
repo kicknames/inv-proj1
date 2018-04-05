@@ -11,17 +11,21 @@ use Phalcon\Mvc\Dispatcher as MvcDispatcher;
 use Phalcon\Mvc\View\Engine\Volt;
 use Phalcon\Mvc\Model\Manager as ModelManager;
 use Phalcon\Mvc\Model\Metadata\Memory as ModelMetadata;
-use app\helpers\SecurityHelper;
 use Phalcon\Mvc\Url;
-use app\services\session\SessionService;
-use app\services\TranslatorService;
 use Phalcon\Db\Adapter\Pdo\Mysql;
 
+use app\services\session\SessionService;
+use app\services\TranslatorService;
+use app\helpers\SecurityHelper;
+
 /**
- * Very simple MVC structure
+ * Ficheiro de Bootstrap do phalcon
+ * Autoload
+ * 
+ * @see https://github.com/phalcon/docs/blob/3.3/en/tutorial-base.md/#bootstrap - Docs
  */
 $loader = new Loader();
-
+/* Registas o diretorios para a framework saber onde estao as coisas */
 $loader->registerDirs(
         [
             "../apps/controllers/",
@@ -29,6 +33,7 @@ $loader->registerDirs(
             "../apps/helpers/"
         ]
 );
+/* Registo de namespaces */
 $loader->registerNamespaces(
         [
             "app\helper" => "../apps/helpers/",
@@ -36,7 +41,7 @@ $loader->registerNamespaces(
             "app\services" => "../apps/services"
         ]
 );
-
+/* inicia os parametros na framework */
 $loader->register();
 
 $di = new Di();
@@ -54,6 +59,7 @@ $di->set("response", Response::class);
 
 // Registering a Http\Request
 $di->set("request", Request::class);
+
 $di->set(
         "voltService", function ($view, $di) {
     $volt = new Volt($view, $di);

@@ -8,11 +8,10 @@
                         <!-- form card login -->
                         <div class="card rounded-0">
                             <div class="card-header">
-                                <h3 class="mb-0">{{this.tradutor.get('login.title')}}</h3>
-                                
+                                <h3 class="mb-0">{{this.tradutor.get('login.title')}}</h3>  
                             </div>
                             <div class="card-body">
-                                <div style="text-align: center;"><img src="/img/user.jpg" style="width: 175px;border: 4px solid #d6cece;
+                                <div id="login-img" style="text-align: center;"><img src="/img/user.jpg" style="width: 175px;border: 4px solid #d6cece;
                                                                       box-shadow: 1px 1px 1px;"></div>
                                 <form class="form" action="/Session/doLogin" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
                                     <div class="form-group">
