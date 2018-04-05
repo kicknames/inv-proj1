@@ -47,11 +47,25 @@ jQuery(document).ready(function () {
             jQuery(this).remove();
         });
     });
-    jQuery('#uname1, #pwd1').focus(function (e) {
+    console.log($(window).width());
+
+    if ($(window).width() < 430) {
+        jQuery('#uname1, #pwd1').focus(function (e) {
             jQuery('#login-img').fadeOut(200);
-    });
-    jQuery('#uname1, #pwd1').focusout(function (e) {
+        });
+        jQuery('#uname1, #pwd1').focusout(function (e) {
             jQuery('#login-img').fadeIn(200);
+        });
+    }
+    $(window).resize(function () {
+        if ($(window).width() < 430) {
+            jQuery('#uname1, #pwd1').focus(function (e) {
+                jQuery('#login-img').fadeOut(200);
+            });
+            jQuery('#uname1, #pwd1').focusout(function (e) {
+                jQuery('#login-img').fadeIn(200);
+            });
+        }
     });
 });
 
