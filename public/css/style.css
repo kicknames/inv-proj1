@@ -378,3 +378,9 @@ and open the template in the editor.
 .list-products{
     text-align: left;
 }
+.card-body > .new-request-plate{
+  padding-left: 0; 
+}
+.card-body > .new-request-plate:nth-child(even) > li:not(:first-child){
+  background: #ececec;  
+}

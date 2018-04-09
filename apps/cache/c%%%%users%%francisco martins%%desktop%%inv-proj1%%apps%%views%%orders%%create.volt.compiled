@@ -73,13 +73,7 @@
         <div class="card col-xl-3 col-sm-3 col-6 request-card">
             <img class="card-img-top card-img" src="/img/icons/19-bill.svg" alt="Card image cap">
             <h5 class="card-title">Pedido:</h5>
-            <div class="card-body">
-                <h5 class="card-title" id="request-drinks">Bebidas:</h5>
-                <!--ul id="new-request-list" class="list-group list-group-flush">
-                    <li class="list-group-item">Prato Grande de Bacalhau</li>
-                    <li class="list-group-item">Vinho do Lano 1L</li>
-                </ul-->
-                <h5 class="card-title" id="request-food">Pratos:</h5>
+            <div class="card-body" id="order-items-list">
             </div>
             <div class="card-body">
                 <a href="#" class="btn btn-primary">Envia para cozinha</a>

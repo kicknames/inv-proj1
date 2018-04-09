@@ -39,11 +39,22 @@ jQuery(document).ready(function () {
      * Adiciona o prato ao pedido
      */
     jQuery('#add-to-plate-request').click(function () {
-        var clone = jQuery('#plate-composition-list').clone();
-        console.log(clone);
-        clone.attr('id', 'new-req-item');
-        jQuery('#request-food').after(clone);
+        var plates = jQuery('#plate-composition-list').clone();
+        var drinks = jQuery('#drinks-list').clone();
+
+        jQuery(plates).prepend('<li class="list-group-item active">Pedido<i class="fas fa-trash-alt remove-plate" style="float:right"></i></li>');
+        plates.attr('id', 'new-req-item');
+        drinks.attr('id', 'new-req-item-drinks');
+        jQuery(plates).attr('class', '');
+        jQuery(plates).addClass('new-request-plate');
+        jQuery(drinks).children().each(function () {
+            jQuery(plates).append(this);
+        });
+        jQuery('#order-items-list').append(plates);
         jQuery('#plate-composition-list').children().each(function () {
+            jQuery(this).remove();
+        });
+        jQuery('#drinks-list').children().each(function () {
             jQuery(this).remove();
         });
     });
@@ -66,6 +77,9 @@ jQuery(document).ready(function () {
                 jQuery('#login-img').fadeIn(200);
             });
         }
+    });
+    jQuery('body').delegate(".remove-plate", 'click', function () {
+        jQuery(this).parent().parent().remove();
     });
 });
 

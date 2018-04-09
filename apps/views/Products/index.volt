@@ -24,7 +24,7 @@
             <label class="col-12" style="padding-left:0; margin-bottom: 1rem;" for="exampleFormControlSelect2">{{this.tradutor.get('add.label.category')}}</label>
             <div class="form-group categories-cont col-xl-4 col-sm-6 ">
                 {% for item in categories %}
-                    <div id="{{item.id}}" class="form-group categories-sub-cont {% if item.id ==191 %}checked{%endif%}">
+                    <div id="{{item.id}}" class="form-group categories-sub-cont {% if item.id ==221 %}checked{%endif%}">
                         <img class="form-check-input-img" for="inlineCheckbox1" src="/img/icons/{{item.icon}}.svg">
                         <label class="form-check-label" for="inlineCheckbox1">{{this.tradutor.get(item.name)}}</label>
                     </div>
