@@ -1,6 +1,6 @@
 a:9:{i:0;s:28:"<html>
     <head>
-        ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1037:"
+        ";s:4:"head";a:5:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:720:"
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -8,8 +8,8 @@ a:9:{i:0;s:28:"<html>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-            <link rel="stylesheet" href="/css/style.css">
-            <script src="/js/buildJs12312312312.js" type="text/javascript"></script>
+            <link rel="stylesheet" href="";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}i:1;a:4:{s:4:"type";i:359;s:4:"expr";a:4:{s:4:"type";i:350;s:4:"name";a:5:{s:4:"type";i:46;s:4:"left";a:5:{s:4:"type";i:46;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:4:"this";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}s:5:"right";a:4:{s:4:"type";i:265;s:5:"value";s:7:"session";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}s:5:"right";a:4:{s:4:"type";i:265;s:5:"value";s:6:"getCss";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:11;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}i:2;a:4:{s:4:"type";i:357;s:5:"value";s:29:"">
+            <script src="";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}i:3;a:4:{s:4:"type";i:359;s:4:"expr";a:4:{s:4:"type";i:350;s:4:"name";a:5:{s:4:"type";i:46;s:4:"left";a:5:{s:4:"type";i:46;s:4:"left";a:4:{s:4:"type";i:265;s:5:"value";s:4:"this";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}s:5:"right";a:4:{s:4:"type";i:265;s:5:"value";s:7:"session";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}s:5:"right";a:4:{s:4:"type";i:265;s:5:"value";s:5:"getJs";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:12;}s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:14;}i:4;a:4:{s:4:"type";i:357;s:5:"value";s:249:"" type="text/javascript"></script>
             <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
         ";s:4:"file";s:23:"../apps/views/base.volt";s:4:"line";i:14;}}i:1;s:17:"
         <title>";s:5:"title";N;i:2;s:2458:"<?= $this->tradutor->get('titulo') ?></title>

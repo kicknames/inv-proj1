@@ -8,8 +8,8 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-            <link rel="stylesheet" href="/css/style12312312312.css">
-            <script src="/js/asd123131234.js" type="text/javascript"></script>
+            <link rel="stylesheet" href="{{this.session.getCss()}}">
+            <script src="{{this.session.getJs()}}" type="text/javascript"></script>
             <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
         {% endblock %}
         <title>{% block title %}{% endblock %}{{this.tradutor.get('titulo')}}</title>

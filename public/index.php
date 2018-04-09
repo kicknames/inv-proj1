@@ -98,7 +98,7 @@ $di->set(
         "dbname" => "heroku_97aca66527a4246",
             ]
     );
-}
+},true
 );
 $di->set(
         "db", function () {

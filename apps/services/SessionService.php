@@ -23,6 +23,48 @@ class SessionService extends Session {
     private $MySql;
 
     /**
+     * Gera a hash do ficheiro de css
+     * 
+     * @return string - Nome do ficheiro
+     */
+    private function buildCssFileHash() {
+        if (!$this->has('css_file')) {
+            $files = glob('css/build/*');
+            foreach ($files as $file) {
+                if (is_file($file)) {
+                    unlink($file);
+                }
+            }
+            $_hashFileName = md5(date('l jS \of F Y h:i:s A')) . '.css';
+            copy('css/style.css', 'css/build/' . $_hashFileName);
+            return '/css/build/' . $_hashFileName;
+        }else{
+            return $this->get('css_file');
+        }
+    }
+
+    /**
+     * Gera a hash do ficheiro de JS
+     * 
+     * @return string-  Nome do ficheiro
+     */
+    private function buildJsFileHash() {
+        if (!$this->has('js_file')) {
+            $files = glob('js/build/*');
+            foreach ($files as $file) {
+                if (is_file($file)) {
+                    unlink($file);
+                }
+            }
+            $_hashFileName = md5(date('l jS \of F Y h:i:s A')) . '.js';
+            copy('js/scripts.js', 'js/build/' . $_hashFileName);
+            return '/js/build/' . $_hashFileName;
+        }else{
+            return $this->get('js_file');
+        }
+    }
+
+    /**
      * Inicializa o serviço que disponibiliza a funcionalidades de sessão da aplicação
      * 
      * Exemplo de um ficheiro de configuração: (typeof \Phalcon\Config)
@@ -41,6 +83,16 @@ class SessionService extends Session {
         $this->start();
         $this->MySql = new Mysql($_config);
         $this->_di = $di;
+        $this->set('css_file', $this->buildCssFileHash());
+        $this->set('js_file', $this->buildJsFileHash());
+    }
+
+    public function getJs() {
+        return $this->get('js_file');
+    }
+
+    public function getCss() {
+        return $this->get('css_file');
     }
 
     /** @return \app\helpers\SecurityHelper Class de encryptação */
@@ -93,8 +145,8 @@ class SessionService extends Session {
     public function getId() {
         return $this->get('username');
     }
-    
-    public function incre($var){
+
+    public function incre($var) {
         return $var++;
     }
 

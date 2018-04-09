@@ -4,6 +4,9 @@ use Phalcon\Mvc\Controller;
 
 class SessionController extends Controller {
 
+    const CACHE_JS_HASH_CTRL = 'CAT_JS_MIN_HASH_CACHE';
+    const CACHE_CSS_HASH_CTRL = 'CAT_JS_MIN_HASH_CACHE';
+
     public function initialize() {
         if ($this->session->hasSessionStarted() && $this->session->getId() == null) {
             $this->response->redirect("/")->send();
@@ -24,8 +27,8 @@ class SessionController extends Controller {
         $this->session->endSession();
         $this->response->redirect('/');
     }
-    
-    function orderAction(){
+
+    function orderAction() {
         $this->session->goMap();
         $this->response->redirect('/restaurant');
     }
