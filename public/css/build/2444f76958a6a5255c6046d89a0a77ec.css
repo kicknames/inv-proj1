@@ -1,0 +1,390 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/mar/2018, 23:27:28
+    Author     : Francisco Martins
+*/
+@media only screen and (max-width: 600px) {
+    .bind-top-xs{
+        padding-top: 5px!important;
+    }
+}
+@media (max-width: 768px){
+    .request-create-menu{
+        padding-right: 0;
+    }
+}
+@media (max-width: 800px){
+    .container-fluid{
+        padding-right: 4px;
+    }
+    .request-card{
+        display: none!important;
+    }
+    .request-create-menu{
+        padding-right: 0;
+    }
+    .request-item-composition{
+        min-width: 43%;
+    }
+}
+.top-menu{
+    font-size: 33px;
+    color: white;
+    margin-left: 7px;
+    margin-right: 10px;
+}
+.language-selector{
+    display: inline-block;
+    min-height: 20px;
+    height: 20px;
+    width: 30px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.language-selector > .option{
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid red;
+}
+
+.main-map{
+    display: block;
+    background: #e2e2e2;
+    height: 82%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-map > .main-bar{
+    display: block;
+    position: relative;
+    height: 40%;
+    width: 30%;
+}
+
+.main-bar > .part-1{
+    display: block;
+    position: relative;
+    background: #909090;
+    width: 15%;
+    height: 70%;
+    left: 2%;
+    top: 5%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: -3px 0px 1px #0000008c;
+}
+.main-bar > .part-2{
+    display: block;
+    position: relative;
+    height: 27.6%;
+    width: 80%;
+    background: #909090;
+    left: 17%;
+    bottom: 22.7%;
+    border-bottom-right-radius: 40px;
+}
+.part-1 > .sit-1{
+    display: inherit;
+    position: relative;
+    height: 33%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    border-top-left-radius: 40px;
+    top: 6px;
+    left: 7px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: -4px -3px 5px 0px #008000;
+}
+.part-1 > .sit-1.occupied{
+    box-shadow: -4px -3px 5px 0px red;
+}
+.products-item-add{
+    cursor: pointer;
+}
+.part-1 > .sit-2{
+    display: inherit;
+    position: relative;
+    height: 33%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    top: 1px;
+    left: 7px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: -4px 3px 5px 0px #008000;
+}
+.part-1 > .sit-2.occupied{
+    box-shadow: -4px 3px 5px 0px red;
+}
+.part-1 >.sit-3{
+    display: inherit;
+    position: relative;
+    height: 33%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    border-bottom-left-radius: 40px;
+    top: -4px;
+    left: 7px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: -4px 3px 5px 0px #008000;
+}
+.part-1 > .sit-3.occupied{
+    box-shadow: -4px 3px 5px 0px red;
+}
+.part-2 > .sit-1{
+    display: inline-block;
+    position: relative;
+    height: 86%;
+    width: 27%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: 0px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #2f8a11ba;
+}
+.part-2 > .sit-1.occupied{
+    box-shadow: 0px 5px 5px 0px red;
+}
+.part-2 > .sit-2{
+    display: inline-block;
+    position: relative;
+    height: 86%;
+    width: 27%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: -2px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #2f8a11ba;
+}
+.part-2 > .sit-2.occupied{
+    box-shadow: 0px 5px 5px 0px red;
+}
+.part-2 > .sit-3{
+    display: inline-block;
+    position: relative;
+    height: 86%;
+    width: 27%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: -2px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #2f8a11ba;
+    z-index: 1;
+}
+.part-2 > .sit-3.occupied{
+    box-shadow: 0px 5px 5px 0px red;
+}
+.part-3 > .sit-1{
+    display: inline-block;
+    position: relative;
+    height: 125%;
+    width: 90%;
+    background: rgb(226, 226, 226);
+    top: 6px;
+    left: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 32px;
+    font-size: 35px;
+    color: white;
+    box-shadow: 6px 1px 5px 0px #2f8a11ba;
+    z-index: 1;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.part-3 > .sit-1.occupied{
+    box-shadow: 6px 1px 5px 0px red;
+}
+.main-bar > .part-3{
+    display: block;
+    height: 30%;
+    width: 14%;
+    background: #909090;
+    top: -64%;
+    right: -82.78%;
+    position: relative;
+    border-top-right-radius: 40px;
+}
+.nav-icon{
+    color: white;
+    font-size: 40px;
+    width: 23px;
+    fill: currentColor;
+    margin: 0 17px;
+}
+.cart{
+    width: 33px;
+    margin-left: 4px;
+}
+.catalog{
+    min-height: 20%;
+    max-height: 100%;
+    max-width: calc(100% + 19px);
+}
+.catalog > .col-sm{
+    border: 1px solid gray;
+    border-radius: 10px;
+    min-height: 125px;
+    cursor: pointer;
+    box-shadow: inset 7px -5px 20px 1px #afafaf7d, 1px 1px 1px #bbbbbb;
+    text-align: center;
+    padding: 10px;
+    max-height: 300px;
+}
+.catalog > .col-sm > a > img{
+    display: block;
+    width: 100%;
+    height: 70%;
+}
+.catalog > .col-sm > a > span{
+    width: 100%;
+    height: 30%;
+    display: inline-block;
+    font-size: 30px;
+    padding-left: 15px;
+}
+.form-check-input-img{
+    width: 50px;
+    display: inline-block;
+}
+.categories-cont{
+    margin-bottom: 0;
+    border: 1px solid #e9ecef;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+.categories-sub-cont{
+    padding: 5px 10px;
+    margin-bottom: 0;
+    background: white;
+    border-radius: 10px;
+    margin:5px 0px;
+    cursor: pointer;
+}
+.categories-sub-cont:hover{
+    background: #e9ecef;
+}
+.categories-sub-cont.checked{
+    background: #e9ecef;
+}
+.first-check{
+    height: 50px;
+    border: 1px solid #e9ecef;
+    padding-left: 10px;
+    border-right: 0;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.second-check{
+    height: 50px;
+    border: 1px solid #e9ecef;
+    padding-right: 10px;
+    border-left: 0;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 11px;
+    margin-left: -16px;
+}
+.table-img{
+    width: 35px;
+    margin-right: 10px;
+}
+.request-create-menu{
+    display: inline-block;
+    padding-left: 0;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+.request-menu-title{
+    background: #343a40;
+    background: linear-gradient(to right, #4d5f71 , #343a40);
+    border-color: #dfdfdf!important;
+    border-top-right-radius: 53px;
+}
+.request-card{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    float: right;
+}
+.card-img{
+    width: 100px;
+    margin: auto;
+    margin-left: 32%;
+    margin-top: 10px;
+}
+.request-item-composition{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10;
+}
+.custom-request-img{
+    margin: 15px 0;
+    width: auto;
+}
+.inner-text{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.request-custom-items{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: top;
+    padding: 0;
+}
+.create-container{
+    margin-top: 10px;
+    border-top: 1px solid black;
+    text-align: right;
+}
+.list-products{
+    text-align: left;
+}
+.card-body > .new-request-plate{
+    padding-left: 0; 
+}
+.card-body > .new-request-plate:nth-child(even) > li:not(:first-child){
+    background: #ececec;  
+}
+.separator{
+    height: 4px;
+    padding: 0;
+}
