@@ -46,7 +46,28 @@
                 <ul class="list-group list-group-flush list-products" id="plate-composition-list">
                 </ul>
             </div>
-            <div class="card-body create-container"><div id="add-to-plate-request" class="btn btn-primary">Adicionar</div></div>
+            <div class="card-body create-container"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Adicionar</button></div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tamanho do prato</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align: center">
+                        <button type="button" data-type="G" class="btn btn-primary btn-lg col-3 add-to-plate-request">Grande</button>
+                        <button type="button" data-type="M" class="btn btn-primary btn-lg col-3 add-to-plate-request">Medio</button>
+                        <button type="button" data-type="P" class="btn btn-primary btn-lg col-3 add-to-plate-request">Pequeno</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

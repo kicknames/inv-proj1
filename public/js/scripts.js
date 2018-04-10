@@ -38,15 +38,22 @@ jQuery(document).ready(function () {
     /**
      * Adiciona o prato ao pedido
      */
-    jQuery('#add-to-plate-request').click(function () {
+    jQuery('.add-to-plate-request').click(function () {
         var plates = jQuery('#plate-composition-list').clone();
         var drinks = jQuery('#drinks-list').clone();
-
-        jQuery(plates).prepend('<li class="list-group-item active">Pedido<i class="fas fa-trash-alt remove-plate" style="float:right"></i></li>');
+        if(jQuery(this).attr('data-type') === 'G'){
+             jQuery(plates).prepend('<li class="list-group-item active">Pedido grande<i class="fas fa-trash-alt remove-plate" style="float:right"></i></li>');
+        }else if(jQuery(this).attr('data-type') === 'M'){
+            jQuery(plates).prepend('<li class="list-group-item active">Pedido medio<i class="fas fa-trash-alt remove-plate" style="float:right"></i></li>');
+        }else{
+            jQuery(plates).prepend('<li class="list-group-item active">Pedido pequeno<i class="fas fa-trash-alt remove-plate" style="float:right"></i></li>');
+        }
+       
         plates.attr('id', 'new-req-item');
         drinks.attr('id', 'new-req-item-drinks');
         jQuery(plates).attr('class', '');
         jQuery(plates).addClass('new-request-plate');
+        jQuery(plates).append('<li class="list-group-item active separator"></li>');
         jQuery(drinks).children().each(function () {
             jQuery(plates).append(this);
         });
