@@ -2,6 +2,7 @@
   "require": {
       "php": "^7.1.0",
       "ext-phalcon": "*"
+	  "apcu":"*"
   },
     "config": {
       "secure-http": false
